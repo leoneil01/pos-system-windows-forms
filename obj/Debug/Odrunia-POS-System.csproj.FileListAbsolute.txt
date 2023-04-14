@@ -1,0 +1,11 @@
+D:\Documents\visual-studio\Odrunia-POS-System\bin\Debug\Odrunia-POS-System.exe.config
+D:\Documents\visual-studio\Odrunia-POS-System\bin\Debug\Odrunia-POS-System.exe
+D:\Documents\visual-studio\Odrunia-POS-System\bin\Debug\Odrunia-POS-System.pdb
+D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia-POS-System.csproj.AssemblyReference.cache
+D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia-POS-System.csproj.SuggestedBindingRedirects.cache
+D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Form1.resources
+D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Properties.Resources.resources
+D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia-POS-System.csproj.GenerateResource.cache
+D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia-POS-System.csproj.CoreCompileInputs.cache
+D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia-POS-System.exe
+D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia-POS-System.pdb
