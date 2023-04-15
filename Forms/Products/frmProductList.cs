@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Odrunia_POS_System
+namespace Odrunia_POS_System.Forms.Products
 {
-	public partial class Form1 : Form
+	public partial class frmProductList : Form
 	{
-		public Form1()
+		public frmProductList()
 		{
 			InitializeComponent();
 		}
