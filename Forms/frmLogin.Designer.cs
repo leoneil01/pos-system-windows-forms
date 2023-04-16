@@ -36,9 +36,6 @@
 			this.btnLogin = new System.Windows.Forms.Button();
 			this.btnExit = new System.Windows.Forms.Button();
 			this.cmbUserRole = new System.Windows.Forms.ComboBox();
-			this.panel1 = new System.Windows.Forms.Panel();
-			this.label3 = new System.Windows.Forms.Label();
-			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -113,34 +110,12 @@
 			this.cmbUserRole.Size = new System.Drawing.Size(155, 31);
 			this.cmbUserRole.TabIndex = 2;
 			// 
-			// panel1
-			// 
-			this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(179)))), ((int)(((byte)(178)))));
-			this.panel1.Controls.Add(this.label3);
-			this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel1.Location = new System.Drawing.Point(0, 284);
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(461, 65);
-			this.panel1.TabIndex = 6;
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.label3.Location = new System.Drawing.Point(47, 24);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(351, 19);
-			this.label3.TabIndex = 0;
-			this.label3.Text = "Software Developed by Leoneil S. Odrunia";
-			// 
 			// frmLogin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(209)))), ((int)(((byte)(208)))));
-			this.ClientSize = new System.Drawing.Size(461, 349);
-			this.Controls.Add(this.panel1);
+			this.ClientSize = new System.Drawing.Size(461, 450);
 			this.Controls.Add(this.cmbUserRole);
 			this.Controls.Add(this.btnExit);
 			this.Controls.Add(this.btnLogin);
@@ -155,8 +130,6 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Odrunia\'s Mini Mart";
 			this.Load += new System.EventHandler(this.frmLogin_LoadUserRole);
-			this.panel1.ResumeLayout(false);
-			this.panel1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -171,8 +144,6 @@
 		private System.Windows.Forms.Button btnLogin;
 		private System.Windows.Forms.Button btnExit;
 		private System.Windows.Forms.ComboBox cmbUserRole;
-		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.Label label3;
 	}
 }
 
