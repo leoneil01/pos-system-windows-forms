@@ -77,7 +77,7 @@ namespace Odrunia_POS_System.Components
 				}
 				else
 				{
-					return string.Format("{0} {1} {2}", CultureInfo.CurrentCulture.TextInfo.ToTitleCase(myFirstName), myMiddleName[0].ToString().ToUpper(), CultureInfo.CurrentCulture.TextInfo.ToTitleCase(myLastName));
+					return string.Format("{0} {1}. {2}", CultureInfo.CurrentCulture.TextInfo.ToTitleCase(myFirstName), myMiddleName[0].ToString().ToUpper(), CultureInfo.CurrentCulture.TextInfo.ToTitleCase(myLastName));
 				}
 			}
 		}

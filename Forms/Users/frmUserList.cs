@@ -66,7 +66,22 @@ namespace Odrunia_POS_System.Forms.Users
 
 		private void btnDeleteUser_Click(object sender, EventArgs e)
 		{
-
+			if(gridUsers.SelectedRows.Count < 1)
+			{
+				MessageBox.Show("Select user first!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			else if(MessageBox.Show("Are you sure you want to delete this user?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+			{
+				if(user.DeleteUser(int.Parse(gridUsers.SelectedCells[0].Value.ToString())))
+				{
+					MessageBox.Show("User successfully deleted!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+					user.LoadUsers(gridUsers);
+				}
+				else
+				{
+					MessageBox.Show("Failed to delete user!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
+			}
 		}
 	}
 }

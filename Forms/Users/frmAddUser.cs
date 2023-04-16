@@ -42,6 +42,7 @@ namespace Odrunia_POS_System.Forms.Users
 			if(String.IsNullOrWhiteSpace(cmbUserRole.Text))
 			{
 				MessageBox.Show("User Role is required!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				cmbUserRole.Focus();
 			}
 			else if(String.IsNullOrWhiteSpace(txtFirstName.Text))
 			{
@@ -71,6 +72,8 @@ namespace Odrunia_POS_System.Forms.Users
 			else if(check.IsUsernameExists(txtUsername.Text, cmbUserRole.Text))
 			{
 				MessageBox.Show("Username is already taken!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				txtUsername.SelectAll();
+				txtUsername.Focus();
 			}
 			else if(String.IsNullOrWhiteSpace(txtPassword.Text))
 			{
@@ -85,6 +88,8 @@ namespace Odrunia_POS_System.Forms.Users
 			else if(txtPassword.Text != txtConfirmPassword.Text)
 			{
 				MessageBox.Show("Password does not match!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				txtPassword.SelectAll();
+				txtPassword.Focus();
 			}
 			else
 			{
@@ -121,7 +126,7 @@ namespace Odrunia_POS_System.Forms.Users
 					cmbGender.Text = null;
 					dateBirthday.Value = DateTime.Today;
 
-					txtFirstName.Focus();
+					cmbUserRole.Focus();
 				}
 			}
 		}

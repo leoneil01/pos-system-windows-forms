@@ -67,7 +67,7 @@
 			this.txtFirstName.Location = new System.Drawing.Point(33, 300);
 			this.txtFirstName.Name = "txtFirstName";
 			this.txtFirstName.Size = new System.Drawing.Size(260, 27);
-			this.txtFirstName.TabIndex = 0;
+			this.txtFirstName.TabIndex = 1;
 			// 
 			// label1
 			// 
@@ -119,7 +119,7 @@
 			this.txtMiddleName.Location = new System.Drawing.Point(33, 363);
 			this.txtMiddleName.Name = "txtMiddleName";
 			this.txtMiddleName.Size = new System.Drawing.Size(260, 27);
-			this.txtMiddleName.TabIndex = 1;
+			this.txtMiddleName.TabIndex = 2;
 			// 
 			// label2
 			// 
@@ -137,7 +137,7 @@
 			this.txtLastName.Location = new System.Drawing.Point(33, 423);
 			this.txtLastName.Name = "txtLastName";
 			this.txtLastName.Size = new System.Drawing.Size(260, 27);
-			this.txtLastName.TabIndex = 2;
+			this.txtLastName.TabIndex = 3;
 			// 
 			// label3
 			// 
@@ -194,7 +194,7 @@
 			this.cmbGender.Location = new System.Drawing.Point(317, 239);
 			this.cmbGender.Name = "cmbGender";
 			this.cmbGender.Size = new System.Drawing.Size(260, 27);
-			this.cmbGender.TabIndex = 3;
+			this.cmbGender.TabIndex = 4;
 			// 
 			// dateBirthday
 			// 
@@ -349,7 +349,7 @@
 			this.cmbUserRole.Location = new System.Drawing.Point(33, 239);
 			this.cmbUserRole.Name = "cmbUserRole";
 			this.cmbUserRole.Size = new System.Drawing.Size(260, 27);
-			this.cmbUserRole.TabIndex = 4;
+			this.cmbUserRole.TabIndex = 0;
 			// 
 			// frmAddUser
 			// 

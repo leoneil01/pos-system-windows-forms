@@ -146,12 +146,16 @@
     <Compile Include="Functions\Check.cs" />
     <Compile Include="Functions\Gender.cs" />
     <Compile Include="Functions\Login.cs" />
+    <Compile Include="Functions\Product.cs" />
     <Compile Include="Functions\User.cs" />
     <Compile Include="Functions\UserRole.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmAdminDashboard.resx">
       <DependentUpon>frmAdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCashierDashboard.resx">
+      <DependentUpon>frmCashierDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

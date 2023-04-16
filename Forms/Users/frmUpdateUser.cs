@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace Odrunia_POS_System.Forms.Users
 {
@@ -96,7 +97,7 @@ namespace Odrunia_POS_System.Forms.Users
 					age--;
 				}
 
-				if(user.UpdateUser(val.UserId, val.UserProfilePicture, cmbUserRole.Text, txtFirstName.Text, txtMiddleName.Text, txtLastName.Text, cmbGender.Text, age, dateBirthday.Value.Date, txtContactNumber.Text, txtEmail.Text, txtUsername.Text))
+				if(user.UpdateUser(val.UserId, val.UserProfilePicture, cmbUserRole.Text,CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtFirstName.Text),CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtMiddleName.Text),CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtLastName.Text), cmbGender.Text, age, dateBirthday.Value.Date, txtContactNumber.Text, txtEmail.Text, txtUsername.Text))
 				{
 					MessageBox.Show("User successfully updated!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				}

@@ -285,5 +285,37 @@ namespace Odrunia_POS_System.Functions
 				return false;
 			}
 		}
+
+		public bool DeleteUser(int id)
+		{
+			try
+			{
+				using (MySqlConnection connection = new MySqlConnection(con.conString()))
+				{
+					string sql = @"DELETE
+									FROM tbl_users
+									WHERE id = @id;";
+
+					using (MySqlCommand cmd = new MySqlCommand(sql, connection))
+					{
+						cmd.Parameters.AddWithValue("@id", id);
+
+						connection.Open();
+
+						MySqlDataReader dr = cmd.ExecuteReader();
+						dr.Close();
+
+						connection.Close();
+
+						return true;
+					}
+				}
+			}
+			catch(Exception ex)
+			{
+				MessageBox.Show("Error deleting users: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return false;
+			}
+		}
 	}
 }
