@@ -16,5 +16,24 @@ namespace Odrunia_POS_System.Forms.Products
 		{
 			InitializeComponent();
 		}
+
+		Functions.Product product = new Functions.Product();
+
+		private void frmProductList_LoadProduct(object sender, EventArgs e)
+		{
+			product.LoadProducts(gridProducts);
+		}
+
+		private void frmProductList_VisibleChanged(object sender, EventArgs e)
+		{
+			gridProducts.ClearSelection();
+		}
+
+		private void btnAddProduct_Click(object sender, EventArgs e)
+		{
+			Forms.Products.frmAddProduct frmAddProduct = new Forms.Products.frmAddProduct();
+			frmAddProduct.Show();
+			Application.OpenForms["frmAdminDashboard"].Close();
+		}
 	}
 }

@@ -113,6 +113,7 @@
 			this.btnAddProduct.TabStop = false;
 			this.btnAddProduct.Text = "Add Product";
 			this.btnAddProduct.UseVisualStyleBackColor = true;
+			this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
 			// 
 			// gridProducts
 			// 
@@ -170,6 +171,8 @@
 			this.Name = "frmProductList";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Product List";
+			this.Load += new System.EventHandler(this.frmProductList_LoadProduct);
+			this.VisibleChanged += new System.EventHandler(this.frmProductList_VisibleChanged);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

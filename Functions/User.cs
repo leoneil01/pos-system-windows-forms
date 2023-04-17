@@ -204,7 +204,7 @@ namespace Odrunia_POS_System.Functions
 			}
 			catch(Exception ex)
 			{
-				Console.WriteLine("Error adding user: " + ex.ToString());
+				MessageBox.Show("Error adding user: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return false;
 			}
 		}

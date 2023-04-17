@@ -33,3 +33,4 @@ D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms
 D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms.Users.frmViewUser.resources
 D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms.Users.frmUpdateUser.resources
 D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms.frmCashierDashboard.resources
+D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms.Products.frmAddProduct.resources
