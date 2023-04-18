@@ -125,6 +125,18 @@
     <Compile Include="Forms\Products\frmProductList.Designer.cs">
       <DependentUpon>frmProductList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Products\frmUpdateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Products\frmUpdateProduct.Designer.cs">
+      <DependentUpon>frmUpdateProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Products\frmViewProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Products\frmViewProduct.Designer.cs">
+      <DependentUpon>frmViewProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Users\frmAddUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +183,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Products\frmProductList.resx">
       <DependentUpon>frmProductList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Products\frmUpdateProduct.resx">
+      <DependentUpon>frmUpdateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Products\frmViewProduct.resx">
+      <DependentUpon>frmViewProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Users\frmAddUser.resx">
       <DependentUpon>frmAddUser.cs</DependentUpon>

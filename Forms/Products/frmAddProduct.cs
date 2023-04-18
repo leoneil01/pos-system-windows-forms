@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,7 +58,7 @@ namespace Odrunia_POS_System.Forms.Products
 			}
 			else
 			{
-				if(product.AddProduct(txtProductCode.Text, txtProductName.Text, double.Parse(txtProductPrice.Text), int.Parse(txtProductQuantity.Text)))
+				if(product.AddProduct(txtProductCode.Text, CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtProductName.Text), double.Parse(txtProductPrice.Text), int.Parse(txtProductQuantity.Text)))
 				{
 					MessageBox.Show("Product successfully added!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

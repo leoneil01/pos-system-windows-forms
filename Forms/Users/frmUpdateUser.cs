@@ -23,6 +23,7 @@ namespace Odrunia_POS_System.Forms.Users
 		Functions.UserRole userRole = new Functions.UserRole();
 		Functions.User user = new Functions.User();
 		Functions.Gender gender = new Functions.Gender();
+		Functions.Check check = new Functions.Check();
 
 		string imgLocation = string.Empty;
 		private void frmUpdateUser_Load(object sender, EventArgs e)
@@ -82,6 +83,12 @@ namespace Odrunia_POS_System.Forms.Users
 					MessageBoxIcon.Error);
 				txtUsername.Focus();
 			}
+			else if(check.IsUsernameExists(txtUsername.Text, cmbUserRole.Text))
+			{
+				MessageBox.Show("Username is already taken!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				txtUsername.SelectAll();
+				txtUsername.Focus();
+			}
 			else
 			{
 				if(!String.IsNullOrWhiteSpace(imgLocation))
@@ -97,7 +104,7 @@ namespace Odrunia_POS_System.Forms.Users
 					age--;
 				}
 
-				if(user.UpdateUser(val.UserId, val.UserProfilePicture, cmbUserRole.Text,CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtFirstName.Text),CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtMiddleName.Text),CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtLastName.Text), cmbGender.Text, age, dateBirthday.Value.Date, txtContactNumber.Text, txtEmail.Text, txtUsername.Text))
+				if(user.UpdateUser(val.UserId, val.UserProfilePicture, cmbUserRole.Text, CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtFirstName.Text), CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtMiddleName.Text), CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtLastName.Text), cmbGender.Text, age, dateBirthday.Value.Date, txtContactNumber.Text, txtEmail.Text, txtUsername.Text))
 				{
 					MessageBox.Show("User successfully updated!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				}

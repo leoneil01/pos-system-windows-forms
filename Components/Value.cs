@@ -121,18 +121,24 @@ namespace Odrunia_POS_System.Components
 
 		// Product Values
 		public static int productId;
-        public int ProductId { get { return productId; } set { productId = value; } }
+		public int ProductId { get { return productId; } set { productId = value; } }
 
 		public static string productCode;
-        public string ProductCode { get { return productCode; } set { productCode = value; } }
+		public string ProductCode { get { return productCode; } set { productCode = value; } }
 
 		public static string productName;
-        public string ProductName { get { return productName; } set { productName = value; } }
+		public string ProductName { get { return productName; } set { productName = value; } }
 
 		public static double productPrice;
-        public double ProductPrice { get { return productPrice; } set { productPrice = value; } }
+		public double ProductPrice { get { return productPrice; } set { productPrice = value; } }
 
 		public static int productQuantity;
-        public int ProductQuantity { get { return productQuantity; } set { productQuantity = value; } }
+		public int ProductQuantity { get { return productQuantity; } set { productQuantity = value; } }
+
+		public static DateTime productCreated;
+        public DateTime ProductCreated { get { return productCreated; } set { productCreated = value; } }
+
+		public static DateTime productUpdated;
+        public DateTime ProductUpdated { get { return productUpdated; } set { productUpdated = value; } }
     }
 }

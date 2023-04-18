@@ -38,6 +38,7 @@
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.btnAddProduct = new System.Windows.Forms.Button();
 			this.gridProducts = new System.Windows.Forms.DataGridView();
+			this.btnViewProduct = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridProducts)).BeginInit();
@@ -46,6 +47,7 @@
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(179)))), ((int)(((byte)(178)))));
+			this.panel1.Controls.Add(this.btnViewProduct);
 			this.panel1.Controls.Add(this.btnDeleteProduct);
 			this.panel1.Controls.Add(this.btnUpdateProduct);
 			this.panel1.Controls.Add(this.pictureBox1);
@@ -80,13 +82,14 @@
 			this.btnUpdateProduct.AutoSize = true;
 			this.btnUpdateProduct.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnUpdateProduct.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnUpdateProduct.Location = new System.Drawing.Point(16, 139);
+			this.btnUpdateProduct.Location = new System.Drawing.Point(16, 173);
 			this.btnUpdateProduct.Name = "btnUpdateProduct";
 			this.btnUpdateProduct.Size = new System.Drawing.Size(98, 46);
 			this.btnUpdateProduct.TabIndex = 17;
 			this.btnUpdateProduct.TabStop = false;
 			this.btnUpdateProduct.Text = "Update\r\nProduct";
 			this.btnUpdateProduct.UseVisualStyleBackColor = true;
+			this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
 			// 
 			// pictureBox1
 			// 
@@ -158,6 +161,23 @@
 			this.gridProducts.TabIndex = 2;
 			this.gridProducts.TabStop = false;
 			// 
+			// btnViewProduct
+			// 
+			this.btnViewProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnViewProduct.AutoSize = true;
+			this.btnViewProduct.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnViewProduct.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnViewProduct.Location = new System.Drawing.Point(15, 139);
+			this.btnViewProduct.Name = "btnViewProduct";
+			this.btnViewProduct.Size = new System.Drawing.Size(101, 28);
+			this.btnViewProduct.TabIndex = 19;
+			this.btnViewProduct.TabStop = false;
+			this.btnViewProduct.Text = "View Product";
+			this.btnViewProduct.UseVisualStyleBackColor = true;
+			this.btnViewProduct.Click += new System.EventHandler(this.btnViewProduct_Click);
+			// 
 			// frmProductList
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,5 +209,6 @@
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.Button btnAddProduct;
 		public System.Windows.Forms.DataGridView gridProducts;
+		private System.Windows.Forms.Button btnViewProduct;
 	}
 }

@@ -35,5 +35,33 @@ namespace Odrunia_POS_System.Forms.Products
 			frmAddProduct.Show();
 			Application.OpenForms["frmAdminDashboard"].Close();
 		}
+
+		private void btnViewProduct_Click(object sender, EventArgs e)
+		{
+			if(gridProducts.SelectedRows.Count < 1)
+			{
+				MessageBox.Show("Select user first!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			else if(product.GetProduct(int.Parse(gridProducts.SelectedCells[0].Value.ToString())))
+			{
+				Forms.Products.frmViewProduct frmViewProduct = new Forms.Products.frmViewProduct();
+				frmViewProduct.Show();
+				Application.OpenForms["frmAdminDashboard"].Close();
+			}
+		}
+
+		private void btnUpdateProduct_Click(object sender, EventArgs e)
+		{
+			if(gridProducts.SelectedRows.Count < 1)
+			{
+				MessageBox.Show("Select user first!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			else if(product.GetProduct(int.Parse(gridProducts.SelectedCells[0].Value.ToString())))
+			{
+				Forms.Products.frmUpdateProduct frmUpdateProduct = new frmUpdateProduct();
+				frmUpdateProduct.Show();
+				Application.OpenForms["frmAdminDashboard"].Close();
+			}
+		}
 	}
 }

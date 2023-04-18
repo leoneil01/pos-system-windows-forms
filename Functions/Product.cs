@@ -44,8 +44,8 @@ namespace Odrunia_POS_System.Functions
 						grid.Columns["product_name"].HeaderText = "Product Name";
 						grid.Columns["product_price"].HeaderText = "Product Price";
 						grid.Columns["product_quantity"].HeaderText = "Product Quantity";
-						grid.Columns["DATE_FORMAT(p.created_at, '%m/%d/%Y')"].HeaderText = "CreatedAt";
-						grid.Columns["DATE_FORMAT(p.updated_at, '%m/%d/%Y')"].HeaderText = "UpdatedAt";
+						grid.Columns["DATE_FORMAT(p.created_at, '%m/%d/%Y')"].HeaderText = "Created At";
+						grid.Columns["DATE_FORMAT(p.updated_at, '%m/%d/%Y')"].HeaderText = "Updated At";
 
 						foreach(DataGridViewColumn column in grid.Columns)
 						{
@@ -62,13 +62,13 @@ namespace Odrunia_POS_System.Functions
 			}
 		}
 
-		public bool GetProducts(int id)
+		public bool GetProduct(int id)
 		{
 			try
 			{
 				using (MySqlConnection connection = new MySqlConnection(con.conString()))
 				{
-					string sql = @"SELECT p.id, p.product_code, p.product_name, p.product_price, p.product_quantity
+					string sql = @"SELECT p.id, p.product_code, p.product_name, p.product_price, p.product_quantity, p.created_at, p.updated_at
 									FROM tbl_products AS p
 									WHERE p.id = @id;";
 
@@ -91,6 +91,8 @@ namespace Odrunia_POS_System.Functions
 							val.ProductName = dt.Rows[0].Field<string>("product_name");
 							val.ProductPrice = dt.Rows[0].Field<double>("product_price");
 							val.ProductQuantity = dt.Rows[0].Field<int>("product_quantity");
+							val.ProductCreated = dt.Rows[0].Field<DateTime>("created_at");
+							val.ProductUpdated = dt.Rows[0].Field<DateTime>("updated_at");
 
 							connection.Close();
 							return true;
@@ -140,6 +142,41 @@ namespace Odrunia_POS_System.Functions
 			catch(Exception ex)
 			{
 				MessageBox.Show("Error adding product: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return false;
+			}
+		}
+
+		public bool UpdateProduct(int id, string productCode, string productName, double productPrice, int productQuantity)
+		{
+			try
+			{
+				using (MySqlConnection connection = new MySqlConnection(con.conString()))
+				{
+					string sql = @"UPDATE tbl_products
+								SET product_code = @productCode, product_name = @productName, product_price = @productPrice, product_quantity = @productQuantity, updated_at = CURRENT_TIMESTAMP
+								WHERE id = @id;";
+
+					using(MySqlCommand cmd = new MySqlCommand(sql, connection))
+					{
+						cmd.Parameters.AddWithValue("@id", id);
+						cmd.Parameters.AddWithValue("@productCode", productCode);
+						cmd.Parameters.AddWithValue("@productName", productName);
+						cmd.Parameters.AddWithValue("@productPrice", productPrice);
+						cmd.Parameters.AddWithValue("@productQuantity", productQuantity);
+
+						connection.Open();
+
+						MySqlDataReader dr = cmd.ExecuteReader();
+						dr.Close();
+
+						connection.Close();
+						return true;
+					}
+				}
+			}
+			catch(Exception ex)
+			{
+				MessageBox.Show("Error updating products: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return false;
 			}
 		}
