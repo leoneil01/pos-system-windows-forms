@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
+using System.Runtime.Remoting;
 
 namespace Odrunia_POS_System.Components
 {
@@ -136,9 +137,19 @@ namespace Odrunia_POS_System.Components
 		public int ProductQuantity { get { return productQuantity; } set { productQuantity = value; } }
 
 		public static DateTime productCreated;
-        public DateTime ProductCreated { get { return productCreated; } set { productCreated = value; } }
+		public DateTime ProductCreated { get { return productCreated; } set { productCreated = value; } }
 
 		public static DateTime productUpdated;
-        public DateTime ProductUpdated { get { return productUpdated; } set { productUpdated = value; } }
+		public DateTime ProductUpdated { get { return productUpdated; } set { productUpdated = value; } }
+	}
+
+	internal class Cart
+	{
+		// Customer Values
+		public string ProductCode { get; set; }
+		public string ProductName { get; set; }
+		public double ProductPrice { get; set; }
+		public int ProductQuantity { get; set; }
+        public DateTime DateCreated { get; set; }
     }
 }

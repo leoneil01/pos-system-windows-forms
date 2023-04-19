@@ -33,12 +33,12 @@
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.btnViewProduct = new System.Windows.Forms.Button();
 			this.btnDeleteProduct = new System.Windows.Forms.Button();
 			this.btnUpdateProduct = new System.Windows.Forms.Button();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.btnAddProduct = new System.Windows.Forms.Button();
 			this.gridProducts = new System.Windows.Forms.DataGridView();
-			this.btnViewProduct = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridProducts)).BeginInit();
@@ -58,6 +58,23 @@
 			this.panel1.Size = new System.Drawing.Size(133, 358);
 			this.panel1.TabIndex = 1;
 			// 
+			// btnViewProduct
+			// 
+			this.btnViewProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnViewProduct.AutoSize = true;
+			this.btnViewProduct.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnViewProduct.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnViewProduct.Location = new System.Drawing.Point(15, 139);
+			this.btnViewProduct.Name = "btnViewProduct";
+			this.btnViewProduct.Size = new System.Drawing.Size(101, 28);
+			this.btnViewProduct.TabIndex = 19;
+			this.btnViewProduct.TabStop = false;
+			this.btnViewProduct.Text = "View Product";
+			this.btnViewProduct.UseVisualStyleBackColor = true;
+			this.btnViewProduct.Click += new System.EventHandler(this.btnViewProduct_Click);
+			// 
 			// btnDeleteProduct
 			// 
 			this.btnDeleteProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -73,6 +90,7 @@
 			this.btnDeleteProduct.TabStop = false;
 			this.btnDeleteProduct.Text = "Delete Product";
 			this.btnDeleteProduct.UseVisualStyleBackColor = true;
+			this.btnDeleteProduct.Click += new System.EventHandler(this.btnDeleteProduct_Click);
 			// 
 			// btnUpdateProduct
 			// 
@@ -133,7 +151,8 @@
 			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
 			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
 			this.gridProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-			this.gridProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.gridProducts.ColumnHeadersHeight = 55;
+			this.gridProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
 			this.gridProducts.Cursor = System.Windows.Forms.Cursors.Hand;
 			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -156,27 +175,11 @@
 			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
 			this.gridProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
 			this.gridProducts.RowHeadersVisible = false;
+			this.gridProducts.RowTemplate.Height = 80;
 			this.gridProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.gridProducts.Size = new System.Drawing.Size(1058, 358);
 			this.gridProducts.TabIndex = 2;
 			this.gridProducts.TabStop = false;
-			// 
-			// btnViewProduct
-			// 
-			this.btnViewProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnViewProduct.AutoSize = true;
-			this.btnViewProduct.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnViewProduct.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnViewProduct.Location = new System.Drawing.Point(15, 139);
-			this.btnViewProduct.Name = "btnViewProduct";
-			this.btnViewProduct.Size = new System.Drawing.Size(101, 28);
-			this.btnViewProduct.TabIndex = 19;
-			this.btnViewProduct.TabStop = false;
-			this.btnViewProduct.Text = "View Product";
-			this.btnViewProduct.UseVisualStyleBackColor = true;
-			this.btnViewProduct.Click += new System.EventHandler(this.btnViewProduct_Click);
 			// 
 			// frmProductList
 			// 

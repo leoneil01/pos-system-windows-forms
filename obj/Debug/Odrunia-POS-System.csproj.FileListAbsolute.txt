@@ -36,3 +36,7 @@ D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms
 D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms.Products.frmAddProduct.resources
 D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms.Products.frmUpdateProduct.resources
 D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms.Products.frmViewProduct.resources
+D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms.frmCustomerDashboard.resources
+D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms.Customers.frmAddCustomerOrder.resources
+D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms.Customers.frmProductAvailable.resources
+D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms.Customers.frmViewCustomerOrder.resources

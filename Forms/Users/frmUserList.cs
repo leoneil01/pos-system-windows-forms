@@ -81,6 +81,8 @@ namespace Odrunia_POS_System.Forms.Users
 				{
 					MessageBox.Show("Failed to delete user!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
+
+				user.LoadUsers(gridUsers);
 			}
 		}
 	}

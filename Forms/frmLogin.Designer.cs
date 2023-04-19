@@ -36,6 +36,7 @@
 			this.btnLogin = new System.Windows.Forms.Button();
 			this.btnExit = new System.Windows.Forms.Button();
 			this.cmbUserRole = new System.Windows.Forms.ComboBox();
+			this.btnCustomer = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -100,6 +101,7 @@
 			this.btnExit.TabStop = false;
 			this.btnExit.Text = "Exit";
 			this.btnExit.UseVisualStyleBackColor = true;
+			this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
 			// 
 			// cmbUserRole
 			// 
@@ -110,12 +112,26 @@
 			this.cmbUserRole.Size = new System.Drawing.Size(155, 31);
 			this.cmbUserRole.TabIndex = 2;
 			// 
+			// btnCustomer
+			// 
+			this.btnCustomer.AutoSize = true;
+			this.btnCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnCustomer.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCustomer.Location = new System.Drawing.Point(134, 305);
+			this.btnCustomer.Name = "btnCustomer";
+			this.btnCustomer.Size = new System.Drawing.Size(174, 29);
+			this.btnCustomer.TabIndex = 6;
+			this.btnCustomer.Text = "Customer";
+			this.btnCustomer.UseVisualStyleBackColor = true;
+			this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
+			// 
 			// frmLogin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(209)))), ((int)(((byte)(208)))));
 			this.ClientSize = new System.Drawing.Size(461, 450);
+			this.Controls.Add(this.btnCustomer);
 			this.Controls.Add(this.cmbUserRole);
 			this.Controls.Add(this.btnExit);
 			this.Controls.Add(this.btnLogin);
@@ -144,6 +160,7 @@
 		private System.Windows.Forms.Button btnLogin;
 		private System.Windows.Forms.Button btnExit;
 		private System.Windows.Forms.ComboBox cmbUserRole;
+		private System.Windows.Forms.Button btnCustomer;
 	}
 }
 

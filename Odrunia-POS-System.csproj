@@ -95,6 +95,24 @@
   <ItemGroup>
     <Compile Include="Components\Connection.cs" />
     <Compile Include="Components\Value.cs" />
+    <Compile Include="Forms\Customers\frmAddCustomerOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customers\frmAddCustomerOrder.Designer.cs">
+      <DependentUpon>frmAddCustomerOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customers\frmProductAvailable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customers\frmProductAvailable.Designer.cs">
+      <DependentUpon>frmProductAvailable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customers\frmViewCustomerOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customers\frmViewCustomerOrder.Designer.cs">
+      <DependentUpon>frmViewCustomerOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmAdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +124,12 @@
     </Compile>
     <Compile Include="Forms\frmCashierDashboard.Designer.cs">
       <DependentUpon>frmCashierDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCustomerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCustomerDashboard.Designer.cs">
+      <DependentUpon>frmCustomerDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmLogin.cs">
       <SubType>Form</SubType>
@@ -169,11 +193,23 @@
     <Compile Include="Functions\UserRole.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Customers\frmAddCustomerOrder.resx">
+      <DependentUpon>frmAddCustomerOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customers\frmProductAvailable.resx">
+      <DependentUpon>frmProductAvailable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customers\frmViewCustomerOrder.resx">
+      <DependentUpon>frmViewCustomerOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAdminDashboard.resx">
       <DependentUpon>frmAdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCashierDashboard.resx">
       <DependentUpon>frmCashierDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCustomerDashboard.resx">
+      <DependentUpon>frmCustomerDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

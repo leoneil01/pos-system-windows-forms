@@ -74,5 +74,17 @@ namespace Odrunia_POS_System
 				txtUsername.Focus();
 			}
 		}
+
+		private void btnExit_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+
+		private void btnCustomer_Click(object sender, EventArgs e)
+		{
+			Forms.frmCustomerDashboard frmCustomer = new Forms.frmCustomerDashboard();
+			frmCustomer.Show();
+			this.Hide();
+		}
 	}
 }

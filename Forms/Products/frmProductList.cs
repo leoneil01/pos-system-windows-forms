@@ -63,5 +63,26 @@ namespace Odrunia_POS_System.Forms.Products
 				Application.OpenForms["frmAdminDashboard"].Close();
 			}
 		}
+
+		private void btnDeleteProduct_Click(object sender, EventArgs e)
+		{
+			if(gridProducts.SelectedRows.Count < 1)
+			{
+				MessageBox.Show("Select user first!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			else if(MessageBox.Show("Are you sure you want to delete this product?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+			{
+				if(product.DeleteProduct(int.Parse(gridProducts.SelectedCells[0].Value.ToString())))
+				{
+					MessageBox.Show("Product successfully deleted!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				}
+				else
+				{
+					MessageBox.Show("Failed to delete product!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
+
+				product.LoadProducts(gridProducts);
+			}
+		}
 	}
 }

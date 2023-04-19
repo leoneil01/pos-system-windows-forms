@@ -176,6 +176,7 @@
 			this.gridUsers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
 			this.gridUsers.RowHeadersVisible = false;
 			this.gridUsers.RowHeadersWidth = 51;
+			this.gridUsers.RowTemplate.Height = 45;
 			this.gridUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.gridUsers.Size = new System.Drawing.Size(1058, 358);
 			this.gridUsers.TabIndex = 1;

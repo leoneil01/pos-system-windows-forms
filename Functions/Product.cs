@@ -180,5 +180,36 @@ namespace Odrunia_POS_System.Functions
 				return false;
 			}
 		}
+
+		public bool DeleteProduct(int id)
+		{
+			try
+			{
+				using (MySqlConnection connection = new MySqlConnection(con.conString()))
+				{
+					string sql = @"DELETE
+									FROM tbl_products
+									WHERE id = @id;";
+
+					using (MySqlCommand cmd = new MySqlCommand(sql, connection))
+					{
+						cmd.Parameters.AddWithValue("@id", id);
+
+						connection.Open();
+
+						MySqlDataReader dr = cmd.ExecuteReader();
+
+						connection.Close();
+
+						return true;
+					}
+				}
+			}
+			catch(Exception ex)
+			{
+				MessageBox.Show("Error deleting products: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return false;
+			}
+		}
 	}
 }
