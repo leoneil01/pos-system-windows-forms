@@ -40,3 +40,4 @@ D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms
 D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms.Customers.frmAddCustomerOrder.resources
 D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms.Customers.frmProductAvailable.resources
 D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms.Customers.frmViewCustomerOrder.resources
+D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms.Customers.frmCustomerDetails.resources

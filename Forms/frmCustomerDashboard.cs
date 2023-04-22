@@ -19,17 +19,17 @@ namespace Odrunia_POS_System.Forms
 
 		private void btnOrder_Click(object sender, EventArgs e)
 		{
+
+		}
+
+		private void frmCustomerDashboard_Load(object sender, EventArgs e)
+		{
 			pnlDashboard.Controls.Clear();
 			Forms.Customers.frmProductAvailable frmProductAvailable = new Forms.Customers.frmProductAvailable();
 			frmProductAvailable.TopLevel = false;
 			pnlDashboard.Controls.Add(frmProductAvailable);
 			frmProductAvailable.Dock = DockStyle.Fill;
 			frmProductAvailable.Show();
-		}
-
-		private void frmCustomerDashboard_Load(object sender, EventArgs e)
-		{
-
 		}
 	}
 }

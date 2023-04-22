@@ -82,8 +82,8 @@ namespace Odrunia_POS_System
 
 		private void btnCustomer_Click(object sender, EventArgs e)
 		{
-			Forms.frmCustomerDashboard frmCustomer = new Forms.frmCustomerDashboard();
-			frmCustomer.Show();
+			Forms.Customers.frmCustomerDetails frmCustomerDetails = new Forms.Customers.frmCustomerDetails();
+			frmCustomerDetails.Show();
 			this.Hide();
 		}
 	}

@@ -20,9 +20,7 @@ namespace Odrunia_POS_System.Functions
 			{
 				using (MySqlConnection connection = new MySqlConnection(con.conString()))
 				{
-					string sql = @"SELECT p.id, p.product_code, p.product_name, p.product_price, p.product_quantity,
-									DATE_FORMAT(p.created_at, '%m/%d/%Y'),
-									DATE_FORMAT(p.updated_at, '%m/%d/%Y')
+					string sql = @"SELECT p.id, p.product_code, p.product_name, p.product_price, p.product_quantity
 									FROM tbl_products AS p
 									ORDER BY p.created_at DESC, p.product_code;";
 
@@ -44,8 +42,6 @@ namespace Odrunia_POS_System.Functions
 						grid.Columns["product_name"].HeaderText = "Product Name";
 						grid.Columns["product_price"].HeaderText = "Product Price";
 						grid.Columns["product_quantity"].HeaderText = "Product Quantity";
-						grid.Columns["DATE_FORMAT(p.created_at, '%m/%d/%Y')"].HeaderText = "Created At";
-						grid.Columns["DATE_FORMAT(p.updated_at, '%m/%d/%Y')"].HeaderText = "Updated At";
 
 						foreach(DataGridViewColumn column in grid.Columns)
 						{
@@ -91,8 +87,6 @@ namespace Odrunia_POS_System.Functions
 							val.ProductName = dt.Rows[0].Field<string>("product_name");
 							val.ProductPrice = dt.Rows[0].Field<double>("product_price");
 							val.ProductQuantity = dt.Rows[0].Field<int>("product_quantity");
-							val.ProductCreated = dt.Rows[0].Field<DateTime>("created_at");
-							val.ProductUpdated = dt.Rows[0].Field<DateTime>("updated_at");
 
 							connection.Close();
 							return true;

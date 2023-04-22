@@ -101,6 +101,12 @@
     <Compile Include="Forms\Customers\frmAddCustomerOrder.Designer.cs">
       <DependentUpon>frmAddCustomerOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Customers\frmCustomerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customers\frmCustomerDetails.Designer.cs">
+      <DependentUpon>frmCustomerDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Customers\frmProductAvailable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,7 @@
     <Compile Include="Functions\Check.cs" />
     <Compile Include="Functions\Gender.cs" />
     <Compile Include="Functions\Login.cs" />
+    <Compile Include="Functions\Order.cs" />
     <Compile Include="Functions\Product.cs" />
     <Compile Include="Functions\User.cs" />
     <Compile Include="Functions\UserRole.cs" />
@@ -195,6 +202,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Customers\frmAddCustomerOrder.resx">
       <DependentUpon>frmAddCustomerOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customers\frmCustomerDetails.resx">
+      <DependentUpon>frmCustomerDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Customers\frmProductAvailable.resx">
       <DependentUpon>frmProductAvailable.cs</DependentUpon>
