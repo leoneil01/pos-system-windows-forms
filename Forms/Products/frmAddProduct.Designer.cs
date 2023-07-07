@@ -39,6 +39,10 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.btnBack = new System.Windows.Forms.Button();
 			this.btnAdd = new System.Windows.Forms.Button();
+			this.pbProductImg = new System.Windows.Forms.PictureBox();
+			this.btnRemove = new System.Windows.Forms.Button();
+			this.btnUpload = new System.Windows.Forms.Button();
+			((System.ComponentModel.ISupportInitialize)(this.pbProductImg)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -118,7 +122,7 @@
 			this.btnBack.AutoSize = true;
 			this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnBack.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnBack.Location = new System.Drawing.Point(217, 336);
+			this.btnBack.Location = new System.Drawing.Point(371, 336);
 			this.btnBack.Name = "btnBack";
 			this.btnBack.Size = new System.Drawing.Size(97, 28);
 			this.btnBack.TabIndex = 36;
@@ -132,7 +136,7 @@
 			this.btnAdd.AutoSize = true;
 			this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnAdd.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnAdd.Location = new System.Drawing.Point(323, 336);
+			this.btnAdd.Location = new System.Drawing.Point(477, 336);
 			this.btnAdd.Name = "btnAdd";
 			this.btnAdd.Size = new System.Drawing.Size(97, 28);
 			this.btnAdd.TabIndex = 35;
@@ -140,12 +144,53 @@
 			this.btnAdd.UseVisualStyleBackColor = true;
 			this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
 			// 
+			// pbProductImg
+			// 
+			this.pbProductImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(231)))), ((int)(((byte)(227)))));
+			this.pbProductImg.ErrorImage = null;
+			this.pbProductImg.Location = new System.Drawing.Point(371, 42);
+			this.pbProductImg.Name = "pbProductImg";
+			this.pbProductImg.Size = new System.Drawing.Size(150, 150);
+			this.pbProductImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pbProductImg.TabIndex = 78;
+			this.pbProductImg.TabStop = false;
+			// 
+			// btnRemove
+			// 
+			this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnRemove.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnRemove.Location = new System.Drawing.Point(346, 205);
+			this.btnRemove.Name = "btnRemove";
+			this.btnRemove.Size = new System.Drawing.Size(97, 28);
+			this.btnRemove.TabIndex = 80;
+			this.btnRemove.TabStop = false;
+			this.btnRemove.Text = "Remove";
+			this.btnRemove.UseVisualStyleBackColor = true;
+			this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+			// 
+			// btnUpload
+			// 
+			this.btnUpload.AutoSize = true;
+			this.btnUpload.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnUpload.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnUpload.Location = new System.Drawing.Point(449, 205);
+			this.btnUpload.Name = "btnUpload";
+			this.btnUpload.Size = new System.Drawing.Size(97, 28);
+			this.btnUpload.TabIndex = 79;
+			this.btnUpload.TabStop = false;
+			this.btnUpload.Text = "Upload";
+			this.btnUpload.UseVisualStyleBackColor = true;
+			this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+			// 
 			// frmAddProduct
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(227)))), ((int)(((byte)(227)))));
-			this.ClientSize = new System.Drawing.Size(432, 376);
+			this.ClientSize = new System.Drawing.Size(586, 376);
+			this.Controls.Add(this.btnRemove);
+			this.Controls.Add(this.btnUpload);
+			this.Controls.Add(this.pbProductImg);
 			this.Controls.Add(this.btnBack);
 			this.Controls.Add(this.btnAdd);
 			this.Controls.Add(this.txtProductQuantity);
@@ -162,6 +207,7 @@
 			this.Name = "frmAddProduct";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Add Product";
+			((System.ComponentModel.ISupportInitialize)(this.pbProductImg)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -179,5 +225,8 @@
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Button btnBack;
 		private System.Windows.Forms.Button btnAdd;
+		private System.Windows.Forms.PictureBox pbProductImg;
+		private System.Windows.Forms.Button btnRemove;
+		private System.Windows.Forms.Button btnUpload;
 	}
 }

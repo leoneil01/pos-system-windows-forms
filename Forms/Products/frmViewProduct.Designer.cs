@@ -42,6 +42,8 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.txtProductUpdated = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
+			this.pbProductImg = new System.Windows.Forms.PictureBox();
+			((System.ComponentModel.ISupportInitialize)(this.pbProductImg)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// txtProductQuantity
@@ -178,12 +180,24 @@
 			this.label6.TabIndex = 59;
 			this.label6.Text = "Product Updated";
 			// 
+			// pbProductImg
+			// 
+			this.pbProductImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(231)))), ((int)(((byte)(227)))));
+			this.pbProductImg.ErrorImage = null;
+			this.pbProductImg.Location = new System.Drawing.Point(355, 34);
+			this.pbProductImg.Name = "pbProductImg";
+			this.pbProductImg.Size = new System.Drawing.Size(162, 122);
+			this.pbProductImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pbProductImg.TabIndex = 79;
+			this.pbProductImg.TabStop = false;
+			// 
 			// frmViewProduct
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(227)))), ((int)(((byte)(227)))));
 			this.ClientSize = new System.Drawing.Size(628, 376);
+			this.Controls.Add(this.pbProductImg);
 			this.Controls.Add(this.txtProductUpdated);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.txtProductCreated);
@@ -204,6 +218,7 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "View Product";
 			this.Load += new System.EventHandler(this.frmViewProduct_Load);
+			((System.ComponentModel.ISupportInitialize)(this.pbProductImg)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -224,5 +239,6 @@
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.TextBox txtProductUpdated;
 		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.PictureBox pbProductImg;
 	}
 }

@@ -39,6 +39,10 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.txtProductCode = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
+			this.btnRemove = new System.Windows.Forms.Button();
+			this.btnUpload = new System.Windows.Forms.Button();
+			this.pbProductImg = new System.Windows.Forms.PictureBox();
+			((System.ComponentModel.ISupportInitialize)(this.pbProductImg)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// btnBack
@@ -46,7 +50,7 @@
 			this.btnBack.AutoSize = true;
 			this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnBack.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnBack.Location = new System.Drawing.Point(217, 336);
+			this.btnBack.Location = new System.Drawing.Point(371, 336);
 			this.btnBack.Name = "btnBack";
 			this.btnBack.Size = new System.Drawing.Size(97, 28);
 			this.btnBack.TabIndex = 38;
@@ -60,7 +64,7 @@
 			this.btnSave.AutoSize = true;
 			this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnSave.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnSave.Location = new System.Drawing.Point(323, 336);
+			this.btnSave.Location = new System.Drawing.Point(477, 336);
 			this.btnSave.Name = "btnSave";
 			this.btnSave.Size = new System.Drawing.Size(97, 28);
 			this.btnSave.TabIndex = 4;
@@ -140,12 +144,51 @@
 			this.label1.TabIndex = 39;
 			this.label1.Text = "Product Code";
 			// 
+			// btnRemove
+			// 
+			this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnRemove.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnRemove.Location = new System.Drawing.Point(346, 204);
+			this.btnRemove.Name = "btnRemove";
+			this.btnRemove.Size = new System.Drawing.Size(97, 28);
+			this.btnRemove.TabIndex = 83;
+			this.btnRemove.TabStop = false;
+			this.btnRemove.Text = "Remove";
+			this.btnRemove.UseVisualStyleBackColor = true;
+			// 
+			// btnUpload
+			// 
+			this.btnUpload.AutoSize = true;
+			this.btnUpload.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnUpload.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnUpload.Location = new System.Drawing.Point(449, 204);
+			this.btnUpload.Name = "btnUpload";
+			this.btnUpload.Size = new System.Drawing.Size(97, 28);
+			this.btnUpload.TabIndex = 82;
+			this.btnUpload.TabStop = false;
+			this.btnUpload.Text = "Upload";
+			this.btnUpload.UseVisualStyleBackColor = true;
+			// 
+			// pbProductImg
+			// 
+			this.pbProductImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(231)))), ((int)(((byte)(227)))));
+			this.pbProductImg.ErrorImage = null;
+			this.pbProductImg.Location = new System.Drawing.Point(371, 41);
+			this.pbProductImg.Name = "pbProductImg";
+			this.pbProductImg.Size = new System.Drawing.Size(150, 150);
+			this.pbProductImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pbProductImg.TabIndex = 81;
+			this.pbProductImg.TabStop = false;
+			// 
 			// frmUpdateProduct
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(227)))), ((int)(((byte)(227)))));
-			this.ClientSize = new System.Drawing.Size(432, 376);
+			this.ClientSize = new System.Drawing.Size(586, 376);
+			this.Controls.Add(this.btnRemove);
+			this.Controls.Add(this.btnUpload);
+			this.Controls.Add(this.pbProductImg);
 			this.Controls.Add(this.txtProductQuantity);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.txtProductPrice);
@@ -162,6 +205,7 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Update Product";
 			this.Load += new System.EventHandler(this.frmUpdateProduct_Load);
+			((System.ComponentModel.ISupportInitialize)(this.pbProductImg)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -179,5 +223,8 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox txtProductCode;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Button btnRemove;
+		private System.Windows.Forms.Button btnUpload;
+		private System.Windows.Forms.PictureBox pbProductImg;
 	}
 }

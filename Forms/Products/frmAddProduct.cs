@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Odrunia_POS_System.Forms.Products
 {
@@ -21,6 +23,13 @@ namespace Odrunia_POS_System.Forms.Products
 		Functions.Check check = new Functions.Check();
 
 		Functions.Product product = new Functions.Product();
+
+		string imgLocation = string.Empty;
+		private void RemovePhoto()
+		{
+			imgLocation = string.Empty;
+			pbProductImg.ImageLocation = imgLocation;
+		}
 
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
@@ -58,9 +67,19 @@ namespace Odrunia_POS_System.Forms.Products
 			}
 			else
 			{
-				if(product.AddProduct(txtProductCode.Text, CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtProductName.Text), double.Parse(txtProductPrice.Text), int.Parse(txtProductQuantity.Text)))
+				byte[] productImg = null;
+				if(!String.IsNullOrWhiteSpace(imgLocation))
+				{
+					FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+					BinaryReader br = new BinaryReader(fs);
+					productImg = br.ReadBytes((int)fs.Length);
+				}
+
+				if(product.AddProduct(productImg, txtProductCode.Text, CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtProductName.Text), double.Parse(txtProductPrice.Text), int.Parse(txtProductQuantity.Text)))
 				{
 					MessageBox.Show("Product successfully added!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+					RemovePhoto();
 
 					txtProductCode.ResetText();
 					txtProductName.ResetText();
@@ -91,6 +110,27 @@ namespace Odrunia_POS_System.Forms.Products
 			frmProductList.Dock = DockStyle.Fill;
 			frmProductList.Show();
 			this.Close();
+		}
+
+		private void btnUpload_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog dialog = new OpenFileDialog();
+			dialog.InitialDirectory = "d:\\Pictures";
+			dialog.Filter = "PNG Files|*.png|JPG Files|*.jpg|All Files|*.*";
+
+			if(dialog.ShowDialog() == DialogResult.OK)
+			{
+				imgLocation = dialog.FileName;
+				pbProductImg.ImageLocation = imgLocation;
+			}
+
+			txtProductCode.Focus();
+		}
+
+		private void btnRemove_Click(object sender, EventArgs e)
+		{
+			RemovePhoto();
+			txtProductCode.Focus();
 		}
 	}
 }

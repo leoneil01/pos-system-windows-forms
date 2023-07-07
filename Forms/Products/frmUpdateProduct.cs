@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,8 +23,15 @@ namespace Odrunia_POS_System.Forms.Products
 		Functions.Product product = new Functions.Product();
 		Functions.Check check = new Functions.Check();
 
+		string imgLocation = string.Empty;
 		private void frmUpdateProduct_Load(object sender, EventArgs e)
 		{
+			if(val.ProductProfile != null)
+			{
+				MemoryStream ms = new MemoryStream(val.ProductProfile);
+				pbProductImg.Image = Image.FromStream(ms);
+			}
+
 			txtProductCode.Text = val.ProductCode;
 			txtProductName.Text = val.ProductName;
 			txtProductPrice.Text = val.ProductPrice.ToString();
@@ -66,7 +74,14 @@ namespace Odrunia_POS_System.Forms.Products
 			}
 			else
 			{
-				if(product.UpdateProduct(val.ProductId, txtProductCode.Text, CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtProductName.Text), double.Parse(txtProductPrice.Text), int.Parse(txtProductQuantity.Text)))
+				if(!String.IsNullOrWhiteSpace(imgLocation))
+				{
+					FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+					BinaryReader br = new BinaryReader(fs);
+					val.ProductProfile = br.ReadBytes((int)fs.Length);
+				}
+
+				if(product.UpdateProduct(val.ProductId, val.ProductProfile, txtProductCode.Text, CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtProductName.Text), double.Parse(txtProductPrice.Text), int.Parse(txtProductQuantity.Text)))
 				{
 					MessageBox.Show("Product successfully updated!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				}

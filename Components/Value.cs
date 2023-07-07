@@ -121,10 +121,16 @@ namespace Odrunia_POS_System.Components
 		public string UserUsername { get { return userUsername; } set { userUsername = value; } }
 
 		// Product Values
-		public static int productId;
+		public static byte[] productProfile;
+        public byte[] ProductProfile { get { return productProfile; } set { productProfile = value; } }
+
+        public static int productId;
 		public int ProductId { get { return productId; } set { productId = value; } }
 
-		public static string productCode;
+		public static byte[] productImg;
+        public byte[] ProductImg { get { return productImg; } set { productImg = value; } }
+
+        public static string productCode;
 		public string ProductCode { get { return productCode; } set { productCode = value; } }
 
 		public static string productName;

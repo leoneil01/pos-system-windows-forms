@@ -20,7 +20,7 @@ namespace Odrunia_POS_System.Functions
 			{
 				using (MySqlConnection connection = new MySqlConnection(con.conString()))
 				{
-					string sql = @"SELECT p.id, p.product_code, p.product_name, p.product_price, p.product_quantity
+					string sql = @"SELECT p.id, p.product_img, p.product_code, p.product_name, p.product_price, p.product_quantity
 									FROM tbl_products AS p
 									ORDER BY p.created_at DESC, p.product_code;";
 
@@ -38,10 +38,15 @@ namespace Odrunia_POS_System.Functions
 						grid.ClearSelection();
 
 						grid.Columns["id"].Visible = false;
+						grid.Columns["product_img"].HeaderText = "Product Image";
 						grid.Columns["product_code"].HeaderText = "Product Code";
 						grid.Columns["product_name"].HeaderText = "Product Name";
 						grid.Columns["product_price"].HeaderText = "Product Price";
 						grid.Columns["product_quantity"].HeaderText = "Product Quantity";
+
+						DataGridViewImageColumn clmProfilePicture = new DataGridViewImageColumn();
+						clmProfilePicture = (DataGridViewImageColumn)grid.Columns["product_img"];
+						clmProfilePicture.ImageLayout = DataGridViewImageCellLayout.Stretch;
 
 						foreach(DataGridViewColumn column in grid.Columns)
 						{
@@ -64,7 +69,7 @@ namespace Odrunia_POS_System.Functions
 			{
 				using (MySqlConnection connection = new MySqlConnection(con.conString()))
 				{
-					string sql = @"SELECT p.id, p.product_code, p.product_name, p.product_price, p.product_quantity, p.created_at, p.updated_at
+					string sql = @"SELECT p.id, p.product_img, p.product_code, p.product_name, p.product_price, p.product_quantity, p.created_at, p.updated_at
 									FROM tbl_products AS p
 									WHERE p.id = @id;";
 
@@ -83,10 +88,13 @@ namespace Odrunia_POS_System.Functions
 						if(dt.Rows.Count > 0)
 						{
 							val.ProductId = dt.Rows[0].Field<int>("id");
+							val.ProductImg = dt.Rows[0].Field<byte[]>("product_img");
 							val.ProductCode = dt.Rows[0].Field<string>("product_code");
 							val.ProductName = dt.Rows[0].Field<string>("product_name");
 							val.ProductPrice = dt.Rows[0].Field<double>("product_price");
 							val.ProductQuantity = dt.Rows[0].Field<int>("product_quantity");
+							val.ProductCreated = dt.Rows[0].Field<DateTime>("created_at");
+							val.ProductUpdated = dt.Rows[0].Field<DateTime>("updated_at");
 
 							connection.Close();
 							return true;
@@ -106,17 +114,18 @@ namespace Odrunia_POS_System.Functions
 			}
 		}
 
-		public bool AddProduct(string productCode, string productName, double productPrice, int productQuantity)
+		public bool AddProduct(byte[] productImg, string productCode, string productName, double productPrice, int productQuantity)
 		{
 			try
 			{
 				using (MySqlConnection connection = new MySqlConnection(con.conString()))
 				{
-					string sql = @"INSERT INTO tbl_products(product_code, product_name, product_price, product_quantity)
-									VALUES(@productCode, @productName, @productPrice, @productQuantity);";
+					string sql = @"INSERT INTO tbl_products(product_img, product_code, product_name, product_price, product_quantity)
+									VALUES(@productImg, @productCode, @productName, @productPrice, @productQuantity);";
 
 					using (MySqlCommand cmd = new MySqlCommand(sql, connection))
 					{
+						cmd.Parameters.AddWithValue("@productImg", productImg);
 						cmd.Parameters.AddWithValue("@productCode", productCode);
 						cmd.Parameters.AddWithValue("@productName", productName);
 						cmd.Parameters.AddWithValue("@productPrice", productPrice);
@@ -140,19 +149,20 @@ namespace Odrunia_POS_System.Functions
 			}
 		}
 
-		public bool UpdateProduct(int id, string productCode, string productName, double productPrice, int productQuantity)
+		public bool UpdateProduct(int id, byte[] productImg, string productCode, string productName, double productPrice, int productQuantity)
 		{
 			try
 			{
 				using (MySqlConnection connection = new MySqlConnection(con.conString()))
 				{
 					string sql = @"UPDATE tbl_products
-								SET product_code = @productCode, product_name = @productName, product_price = @productPrice, product_quantity = @productQuantity, updated_at = CURRENT_TIMESTAMP
+								SET product_img = @productImg, product_code = @productCode, product_name = @productName, product_price = @productPrice, product_quantity = @productQuantity, updated_at = CURRENT_TIMESTAMP
 								WHERE id = @id;";
 
 					using(MySqlCommand cmd = new MySqlCommand(sql, connection))
 					{
 						cmd.Parameters.AddWithValue("@id", id);
+						cmd.Parameters.AddWithValue("@productImg", productImg);
 						cmd.Parameters.AddWithValue("@productCode", productCode);
 						cmd.Parameters.AddWithValue("@productName", productName);
 						cmd.Parameters.AddWithValue("@productPrice", productPrice);

@@ -41,3 +41,38 @@ D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms
 D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms.Customers.frmProductAvailable.resources
 D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms.Customers.frmViewCustomerOrder.resources
 D:\Documents\visual-studio\Odrunia-POS-System\obj\Debug\Odrunia_POS_System.Forms.Customers.frmCustomerDetails.resources
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\bin\Debug\Odrunia-POS-System.exe.config
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\bin\Debug\Odrunia-POS-System.exe
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\bin\Debug\Odrunia-POS-System.pdb
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\bin\Debug\System.Buffers.dll
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\bin\Debug\System.Memory.dll
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\bin\Debug\MySql.Data.xml
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\bin\Debug\MySql.Web.xml
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia-POS-System.csproj.AssemblyReference.cache
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia-POS-System.csproj.SuggestedBindingRedirects.cache
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia-POS-System.exe.config
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia_POS_System.Forms.Customers.frmAddCustomerOrder.resources
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia_POS_System.Forms.Customers.frmCustomerDetails.resources
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia_POS_System.Forms.Customers.frmProductAvailable.resources
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia_POS_System.Forms.Customers.frmViewCustomerOrder.resources
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia_POS_System.Forms.frmAdminDashboard.resources
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia_POS_System.Forms.frmCashierDashboard.resources
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia_POS_System.Forms.frmCustomerDashboard.resources
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia_POS_System.frmLogin.resources
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia_POS_System.Forms.Products.frmAddProduct.resources
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia_POS_System.Forms.Products.frmProductList.resources
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia_POS_System.Forms.Products.frmUpdateProduct.resources
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia_POS_System.Forms.Products.frmViewProduct.resources
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia_POS_System.Forms.Users.frmAddUser.resources
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia_POS_System.Forms.Users.frmUpdateUser.resources
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia_POS_System.Forms.Users.frmUserList.resources
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia_POS_System.Forms.Users.frmViewUser.resources
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia_POS_System.Properties.Resources.resources
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia-POS-System.csproj.GenerateResource.cache
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia-POS-System.csproj.CoreCompileInputs.cache
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia-POS-System.csproj.CopyComplete
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia-POS-System.exe
+C:\Users\root\Desktop\windows forms\project1\pos-system-windows-forms\obj\Debug\Odrunia-POS-System.pdb
