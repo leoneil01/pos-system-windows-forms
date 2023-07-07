@@ -20,7 +20,7 @@ namespace Odrunia_POS_System.Functions
 			{
 				using (MySqlConnection connection = new MySqlConnection(con.conString()))
 				{
-					string sql = @"SELECT p.id, p.product_img, p.product_code, p.product_name, p.product_price, p.product_quantity
+					string sql = @"SELECT p.id, p.product_code, p.product_name, p.product_price, p.product_quantity
 									FROM tbl_products AS p
 									ORDER BY p.created_at DESC, p.product_code;";
 
@@ -38,15 +38,10 @@ namespace Odrunia_POS_System.Functions
 						grid.ClearSelection();
 
 						grid.Columns["id"].Visible = false;
-						grid.Columns["product_img"].HeaderText = "Product Image";
 						grid.Columns["product_code"].HeaderText = "Product Code";
 						grid.Columns["product_name"].HeaderText = "Product Name";
 						grid.Columns["product_price"].HeaderText = "Product Price";
 						grid.Columns["product_quantity"].HeaderText = "Product Quantity";
-
-						DataGridViewImageColumn clmProfilePicture = new DataGridViewImageColumn();
-						clmProfilePicture = (DataGridViewImageColumn)grid.Columns["product_img"];
-						clmProfilePicture.ImageLayout = DataGridViewImageCellLayout.Stretch;
 
 						foreach(DataGridViewColumn column in grid.Columns)
 						{
